@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Registration, Username, Email, Password, Location">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Register</title>
+    <link rel="stylesheet" href="../static/css/nicepage.css" media="screen">
+<link rel="stylesheet" href="../static/css/Register.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../static/css/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../static/css/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 3.11.0, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Archivo+Black:400">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster:400">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"url": "index.html"
+}</script>
+    <meta property="og:title" content="Register">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <link rel="canonical" href="/">
+    <meta property="og:url" content="index.html">
+  </head>
+  <body class="u-body"><header class="u-clearfix u-header u-image u-sticky u-header" id="sec-ddeb" data-image-width="3500" data-image-height="2500"><a href="/Register" data-page-id="113581481" class="u-btn u-btn-round u-button-style u-custom-color-8 u-hover-custom-color-9 u-radius-50 u-btn-1">Register</a><a href="/Login" data-page-id="3023120586" class="u-btn u-btn-round u-button-style u-custom-color-8 u-hover-custom-color-9 u-radius-50 u-btn-2">Login</a><h6 class="u-text u-text-custom-color-8 u-text-1">
+        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-custom-color-8 u-btn-3" href="/" data-page-id="75023048">Many for One</a>
+      </h6><div class="u-align-left u-border-1 u-border-grey-15 u-expanded-width u-line u-line-horizontal u-line-1"></div></header>
+    <section class="u-align-center u-clearfix u-image u-section-1" id="sec-0060" data-image-width="3840" data-image-height="2160">
+      <div class="u-clearfix u-sheet u-sheet-1">
+
+        <h1 class="u-align-left u-custom-font u-font-lobster u-text u-text-white u-text-1">Registration </h1>
+
+        <div alt="" class="u-image u-image-circle u-image-1" data-image-width="512" data-image-height="512"></div>
+                  <div class="u-custom-color-7 u-radius-50 u-shape u-shape-round u-shape-1"></div>
+        <h6 class="u-align-left u-custom-font u-font-arial u-text u-text-6"></h6>
+
+          <h2 class="u-align-left u-text u-text-custom-color-9 u-text-2">Username</h2>
+        <h2 class="u-align-left u-text u-text-custom-color-9 u-text-3">Email</h2>
+        <h2 class="u-align-left u-text u-text-custom-color-9 u-text-4">Password</h2>
+        <h2 class="u-align-left u-text u-text-custom-color-9 u-text-5">Location</h2>
+
+          <form action="/Registration" method="POST"   enctype="multipart/form-data">
+
+          <input hidden type="file" id="imgInp"  name="file">
+          <button type="button" onclick="chooseFile();"  class="u-btn u-btn-round u-button-style u-custom-color-9 u-hover-custom-color-10 u-radius-50 u-text-body-alt-color u-btn-1">choose file</button>
+
+
+        <script>
+           function chooseFile() {
+              document.getElementById("imgInp").click();
+           }
+        </script>
+
+      <p>&zwnj;&zwnj;</p>
+      <p>&zwnj;&zwnj;</p>
+      <p>&zwnj;&zwnj;</p>
+      <p>&zwnj;&zwnj;</p>
+
+	<input type=”text” name=UserName value={{request.form.UserName | safe}} >
+    <h6 class="u-align-left u-custom-font u-font-arial u-text u-text-7"></h6>
+
+	<input type=”email” name=Email required pattern=".+@.+(.+)*.(com|il)" value={{request.form.Email | safe}} >
+    <h6 class="u-align-left u-custom-font u-font-arial u-text u-text-8"></h6>
+
+	<input type="password" name=Password minlength="8" required value={{request.form.Password | safe}} >
+    <h6 class="u-align-left u-custom-font "></h6>
+	<input type=”text” name=Location value={{request.form.Location | safe}}>
+	<button type=submit  class="u-btn u-btn-round u-button-style u-custom-color-9 u-hover-custom-color-8 u-radius-50 u-text-body-alt-color u-btn-2"> Register </button>
+  </form>
+      </div>
+
+         <script>
+          setTimeout(function() {
+                if ("{{flag}}" === "1")
+                    alert("Please check your details")},200)
+          if("{{blacklist_email}}" === "1") {
+              alert("That email is blacklisted!\nContact admin@manyforone.com if you think this is a mistake")
+          }
+          </script>
+    </section>
+
+    <footer class="u-align-center u-clearfix u-custom-color-8 u-footer u-footer" id="sec-6768"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">
+          <span style="font-size: 1.5rem;">Created by Yahav, Adi, Shirly &amp; Or</span>
+        </p>
+      </div></footer>
+  </body>
+</html>

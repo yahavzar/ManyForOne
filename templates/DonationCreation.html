@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Product 1 Title">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Donation Creation</title>
+    <link rel="stylesheet" href="../static/css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="../static/css/DonationCreation.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../static/css/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../static/css/nicepage.js" defer=""></script>
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Archivo+Black:400">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i">
+
+
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"url": "index.html"
+}</script>
+    <meta property="og:title" content="Donation Creation">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <link rel="canonical" href="/">
+    <meta property="og:url" content="index.html">
+  </head>
+  <body class="u-body">
+  <header class="u-clearfix u-header u-image u-sticky u-header" id="sec-ddeb" data-image-width="3500" data-image-height="2500">
+    <a href="/Profile" data-page-id="113581481"
+       class="u-btn u-btn-round u-button-style u-custom-color-8 u-hover-custom-color-9 u-radius-50 u-btn-1">Profile</a>
+    <a href="/Logout" data-page-id="3023120586"
+       class="u-btn u-btn-round u-button-style u-custom-color-8 u-hover-custom-color-9 u-radius-50 u-btn-2">Logout</a>
+
+    <h6 class="u-text u-text-custom-color-8 u-text-1"><a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-custom-color-8 u-btn-3" href="/" data-page-id="75023048">Many for One</a></h6>
+    <div class="u-align-left u-border-1 u-border-grey-15 u-expanded-width u-line u-line-horizontal u-line-1"></div>
+  </header>
+
+  <div class="row">
+  <div class="column" style="background-image: url('../static/images/whitebackground.png')">
+    <div class="column-text">
+      <h2>Add Donation</h2>
+      <form class="test"  action ="/createDonation" method = "POST" enctype="multipart/form-data">
+
+        <p style="font-size:25px" width="100px">Description:</p>
+        <textarea id="Description" name="Description" rows="5" cols="60" style="font-size:18px" placeholder="Please enter description" value={{request.form.Description | safe}}></textarea><br>
+
+        <label for="Quantity" style="font-size:25px">Quantity (1-100):</label>
+        <input type="number" id="Quantity" name="Quantity" style="font-size:18px"  min="1" max="100" value={{request.form.Quantity | safe}}><br>
+
+        <p style="font-size:25px; margin-top: 5px" width="100px">Labels:</p>
+        <input type="checkbox" id="Kosher" name="Kosher" value={{request.form.Kosher | safe}}>
+        <label style="font-size:20px" for="Kosher">  Kosher   </label>
+
+        <input type="checkbox" id="Meat" name="Meat" style="margin-left: 15px" value={{request.form.Meat | safe}}>
+        <label style="font-size:20px" for="Meat">  Meat   </label>
+
+        <input type="checkbox" id="Dairy" name="Dairy" style="margin-left: 15px" value={{request.form.Dairy | safe}}>
+        <label style="font-size:20px" for="Dairy"> Dairy</label><br>
+
+        <input type="checkbox" id="Vegan" name="Vegan" value={{request.form.Vegan | safe}}>
+        <label style="font-size:20px" for="Vegan"> Vegan</label>
+
+        <input type="checkbox" id="GlutenFree" name="GlutenFree" style="margin-left: 23px" value={{request.form.GlutenFree | safe}}>
+        <label style="font-size:20px" for="GlutenFree"> Gluten Free</label><br>
+
+        <button type=submit  class="u-border-2 u-border-black u-btn u-btn-round u-button-style u-custom-color-8 u-hover-custom-color-9 u-product-control u-radius-50 u-text-hover-white u-text-white" style="font-size: 12px"> Add Donation </button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="column" style="background-color:#bbb;">
+    <h2>Add Images</h2>
+    <form action="/addImage" method="POST" enctype="multipart/form-data">
+      <label for="files[]">If you have a Images, please upload them first. Allowed format are PNG, JPG.</label>
+      <input hidden  type="file"  id="files[]" name="files[]" onchange="this.form.submit()" accept=".jpg, .jpeg, .png" multiple><br>
+  <button type="button" onclick="chooseFile();" onchange="this.form.submit()" class="u-btn u-btn-round u-button-style u-custom-color-9 u-hover-custom-color-10 u-radius-50 u-text-body-alt-color u-btn-1">choose file</button>
+
+
+        <script>
+           function chooseFile() {
+              document.getElementById("files[]").click();
+           }
+        </script>
+
+    </form>
+    <div style="margin-top: 50px"></div>
+    {% for image in images %}
+    <div class="mySlides">
+        <center>
+          <img src="{{image}}" style="width:60%;height: 500px">
+        </center>
+    </div>
+    {% endfor %}
+
+    <center>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </center>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+    </script>
+  </div>
+</div>
+
+
+
+
+
+    <footer class="u-align-center u-clearfix u-custom-color-8 u-footer u-footer" id="sec-6768">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">
+          <span style="font-size: 1.5rem;">Created by Yahav, Adi, Shirly &amp; Or</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+

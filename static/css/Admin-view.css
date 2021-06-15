@@ -1,0 +1,22 @@
+.bg {
+  /* The image used */
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.row {
+  background-image: url("../images/registrationwallpaper.jpg");
+  margin-left:-5px;
+  margin-right:-5px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  height: 500px;
+  padding: 5px;
+}

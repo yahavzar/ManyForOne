@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="keywords" content="Donation Title">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Donation Preview</title>
+    <link rel="stylesheet" href="../static/css/nicepage.css" media="screen">
+<link rel="stylesheet" href="../static/css/Donation-Preview.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../static/css/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../static/css/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 3.11.0, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Archivo+Black:400">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i">
+
+<style>
+    .inner
+{
+    display: inline-block;
+    transform-origin: center;
+
+}
+      .inner1
+{
+    transform-origin: center;
+
+}
+</style>
+    <script type="application/ld+json"> {
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"url": "index.html"
+        }
+    </script>
+    <meta property="og:title" content="Donation Preview">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <link rel="canonical" href="/">
+    <meta property="og:url" content="index.html">
+  </head>
+
+    <div class="u-align-left u-border-1 u-border-grey-15 u-expanded-width u-line u-line-horizontal u-line-1"></div>
+    <section class="u-clearfix u-grey-10 " id="sec-107b">
+      <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1"><!--product--><!--product_options_json--><!--{"source":""}--><!--/product_options_json--><!--product_item-->
+        <div class="u-container-style u-expanded-width u-image u-product u-image-1" data-image-width="480" data-image-height="270">
+          <div class="container ">
+            <h3 class="u-text u-text-custom-color-10 u-text-1">{{title}}</h3>
+            <p class="u-large-text u-text u-text-variant u-text-2" style="font-size: 15px">Location: {{location}}</p>
+            <p class="u-large-text u-text u-text-variant u-text-2" style="font-size: 15px">Description: {{description}}</p>
+            <p class="u-text u-text-3" style="font-size: 15px">Quantity: {{quantity}}</p>
+            <h6 class="u-text u-text-4" style="font-size: 15px">Labels: {{labels}}</h6>
+            <div class="floating">
+
+                <a id="myBtn1" class="u-btn u-btn-round u-button-style u-custom-color-8 u-hover-custom-color-9 u-product-control u-radius-50 u-btn-2"><!--product_button_content-->Add label<!--/product_button_content--></a><!--/product_button-->
+                <div id="myModal1" class="modal2">
+                  <div class="modal-content1">
+                    <span class="close1">&times;</span>
+                    <h3>Add Label</h3>
+                    <form action ="/similarTag/{{donation_id|safe}}" method = "POST">
+                        {% if similar_tags_flag == 1 %}
+
+                            <form style="float: left" enctype="multipart/form-data">
+                            <div style="text-align: left">
+                                {% if similar_tags[0] != None %}
+                                <input type="checkbox" id="Tag1" name="Tag1" value={{request.form.Tag1 | safe}} >  {{similar_tags[0]}}</input><br>
+                                {% endif %}
+                                {% if similar_tags[1] != None %}
+                                <input type="checkbox"  id="Tag2" name="Tag2" value={{request.form.Tag2 | safe}} >  {{similar_tags[1]}}</input><br>
+                                {% endif %}
+                                {% if similar_tags[2] != None %}
+                                <input type="checkbox" style="margin-bottom: 20px" id="Tag3" name="Tag3" value={{request.form.Tag3 | safe}} >  {{similar_tags[2]}}</input><br>
+                                {% endif %}
+                                {% if user_suggested_tag != None %}
+                                <input type="checkbox" class="" style="margin-bottom: 20px" id="Tag4" name="Tag4" value={{request.form.Tag4 | safe}} >  {{user_suggested_tag}} (your tag)</input><br>
+                                {% endif %}
+
+                            </div>
+                            <button type="submit" class="u-btn u-btn-round u-button-style u-custom-color-9 u-hover-custom-color-8 u-radius-50 u-text-body-alt-color u-btn-2 inner" formaction="/chosenTags/{{donation_id|safe}}" style="margin-bottom: 10px">Confirm</button>
+                                                            <button type="submit" id="cancel" class="u-btn u-btn-round u-button-style u-custom-color-9 u-hover-custom-color-8 u-radius-50 u-text-body-alt-color u-btn-2 inner"  style="margin-bottom: 10px">Cancel</button>
+
+                            </form>
+                        {% endif %}
+                        {% if similar_tags_flag != 1 %}
+
+                        <input name="Label" id="Label" class="u-btn u-btn-round u-button-style u-custom-color-9 u-hover-custom-color-8 u-radius-50 u-text-body-alt-color u-btn-2" type="text"  placeholder="Enter label" value={{request.form.Label | safe}} >
+                        <button type="submit" class="u-btn u-btn-round u-button-style u-custom-color-9 u-hover-custom-color-8 u-radius-50 u-text-body-alt-color u-btn-2 inner1" style="margin-left: 15%">View similar tags</button>
+                        <button class="u-btn u-btn-round u-button-style u-custom-color-9 u-hover-custom-color-8 u-radius-50 u-text-body-alt-color u-btn-2 inner1" style="margin-left: 15%" formaction="/newLabel/{{donation_id|safe}}">Add new label</button>
+                                                {% endif %}
+
+                    </form>
+                  </div>
+                </div>
+              <script>
+                  if("{{login}}" == "false") {
+                      alert("Please login first")
+                  }
+                  if("{{error_donations_request_flag}}" == "true") {
+                      alert("You cannot request a donation you created")
+                  }
+                          if("{{error}}" == 1) {
+                      alert("Please suggest Quantity first")
+                  }
+              </script>
+            <script>
+            var modal1 = document.getElementById("myModal1");
+            var btn1 = document.getElementById("myBtn1");
+            var span1 = document.getElementsByClassName("close1")[0];
+            if("{{flag}}" === "1") {
+              modal1.style.display = "block";
+            }
+            btn1.onclick = function() {
+              modal1.style.display = "block";
+            }
+
+            span1.onclick = function() {
+              modal1.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+              if (event.target === modal1) {
+                modal1.style.display = "none";
+              }
+            }
+            </script>
+                                        {% if addQuantity == 1 %}
+
+              <a id="myBtn2" class="u-btn u-btn-round u-button-style u-custom-color-8 u-hover-custom-color-9 u-product-control u-radius-50 u-btn-3"><!--product_button_content-->Suggest quantity<!--/product_button_content--></a><!--/product_button-->
+              <div id="myModal2" class="modal2">
+                <div class="modal-content2">
+                    <span class="close2">&times;</span>
+                    <h3>Suggest quantity</h3>
+                    <form action ="/addQuantity/{{donation_id}}" method = "POST">
+                      <input type="number" id="Quantity" name="Quantity" style="font-size:18px; width: 100%" placeholder="Enter quantity"  min="1" max="100" value={{request.form.Quantity | safe}}>
+                        <button type=submit  class="u-btn u-btn-round u-button-style u-custom-color-9 u-hover-custom-color-8 u-radius-50 u-text-body-alt-color u-btn-2 inner"> suggest </button>
+
+                    </form>
+                  </div>
+                </div>
+            <script>
+                var modal2 = document.getElementById("myModal2");
+                var btn2 = document.getElementById("myBtn2");
+                var span2 = document.getElementsByClassName("close2")[0];
+                btn2.onclick = function() {
+                  modal2.style.display = "block";
+                }
+
+                span2.onclick = function() {
+                  modal2.style.display = "none";
+                }
+
+                window.onclick = function(event) {
+                  if (event.target === modal2) {
+                    modal2.style.display = "none";
+                  }
+                }
+            </script>
+                                                {% endif %}
+
+              <a id="Takeit" class="u-btn u-btn-round u-button-style u-custom-color-8 u-hover-custom-color-9 u-product-control u-radius-50 u-btn-3">Take it</a><!--/product_button-->
+              <div id="order" class="modal2">
+                <div class="modal-content2">
+                    <span class="close3">&times;</span>
+                    <h3>Choose Method</h3>
+                    <form action ="/takeorder/{{donation_id|safe}}" method = "POST">
+                            <input type="radio" id="TakeAway" name="Method" value=TakeAway required>Take Away</input><br>
+                            <input type="radio"  id="Delivery" name="Method" value=Delivery >Delivery</input><br>
+                      <input type="number" id="reqquantity" required name="Quantity" style="font-size:18px; width: 100%" placeholder="Enter quantity"  min="1" max="{{quantity}}" value={{request.form.reqquantity | safe}}>
+                                                <button type="submit" class="u-btn u-btn-round u-button-style u-custom-color-8 u-hover-custom-color-9 u-product-control u-radius-50 u-btn-3 center" formaction="/takeorder/{{donation_id|safe}}" style="margin-bottom: 10px">Submit</button>
+
+                    </form>
+                  </div>
+                </div>
+            </div>
+              <style>
+                  .center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+              </style>
+            <script>
+                var order = document.getElementById("order");
+                var Takeit = document.getElementById("Takeit");
+                var span3 = document.getElementsByClassName("close3")[0];
+                Takeit.onclick = function() {
+                  order.style.display = "block";
+                }
+
+                span3.onclick = function() {
+                  order.style.display = "none";
+                }
+
+                window.onclick = function(event) {
+                  if (event.target === modal2) {
+                    order.style.display = "none";
+                  }
+                }
+            </script>
+        </div>
+
+         <div class="column">
+                <div style="margin-top: 50px;   "></div>
+                {% for image in images %}
+                <div class="mySlides" style="margin-left: 100px">
+                <center>
+                    <img src="{{image}}" style="width:240px;height: 240px;">
+                </center>
+                </div>
+                {% endfor %}
+
+                  <a class="prev"  style="margin-left: 200px" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" style="margin-left: 10px" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+                </div>
+                    </div>
+
+
+    </section>
+<script>
+              var slideIndex = 1;
+              showSlides(slideIndex);
+
+              // Next/previous controls
+              function plusSlides(n) {
+                showSlides(slideIndex += n);
+              }
+
+              // Thumbnail image controls
+              function currentSlide(n) {
+                showSlides(slideIndex = n);
+              }
+
+              function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                var captionText = document.getElementById("caption");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                captionText.innerHTML = dots[slideIndex-1].alt;
+              }
+            </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+ERROR - DB_Logger - func: add_new_donation failed with error (sqlite3.IntegrityError) NOT NULL constraint failed: donation.id
+[SQL: INSERT INTO donation (user, recipients_amount, is_predictable, description, picture, start_time, end_time, is_open, is_in_process, is_kosher, is_vegan, is_meat, is_dairy, is_gluten_free, recipients_amount_predictions) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('user_mail', 1.0, 1, 'test', None, '2021-04-13 08:47:22.029180', '2021-04-13 10:47:22.029180', 1, 0, 0, 0, 0, 0, 1, None)]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+ERROR - DB_Logger - func: add_new_donation failed with error (sqlite3.IntegrityError) NOT NULL constraint failed: donation.id
+[SQL: INSERT INTO donation (user, recipients_amount, is_predictable, description, picture, start_time, end_time, is_open, is_in_process, is_kosher, is_vegan, is_meat, is_dairy, is_gluten_free, recipients_amount_predictions) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('user_mail', 1.0, 1, 'test', None, '2021-04-13 08:51:35.026265', '2021-04-13 10:51:35.026265', 1, 0, 0, 0, 0, 0, 1, None)]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+ERROR - DB_Logger - func: add_new_tag failed with error (sqlite3.IntegrityError) datatype mismatch
+[SQL: INSERT INTO tag (name) VALUES (?)]
+[parameters: ('tag1',)]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+ERROR - DB_Logger - func: add_new_tag failed with error (sqlite3.IntegrityError) datatype mismatch
+[SQL: INSERT INTO tag (name) VALUES (?)]
+[parameters: ('tag1',)]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+ERROR - DB_Logger - func: add_new_request failed with error (sqlite3.InterfaceError) Error binding parameter 3 - probably unsupported type.
+[SQL: INSERT INTO request (recipient, donor, volunteer, donation, recipients_amount, status) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('recipient_email', 'donor_email', None, <Donation 1>, 2.0, <RequestStatus.Open: 0>)]
+(Background on this error at: http://sqlalche.me/e/13/rvf5)
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+ERROR - DB_Logger - func: add_new_request failed with error (sqlite3.InterfaceError) Error binding parameter 5 - probably unsupported type.
+[SQL: INSERT INTO request (recipient, donor, volunteer, donation, recipients_amount, status) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('recipient_email', 'donor_email', None, 1, 2.0, <RequestStatus.Open: 0>)]
+(Background on this error at: http://sqlalche.me/e/13/rvf5)
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+ERROR - DB_Logger - func: add_new_donation failed with error 'NoneType' object has no attribute 'donation_counter'
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+ERROR - DB_Logger - func: add_new_request failed with error (sqlite3.InterfaceError) Error binding parameter 5 - probably unsupported type.
+[SQL: INSERT INTO request (recipient, donor, volunteer, donation, recipients_amount, status) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('recipient_email1', 'donor_email1', None, 1, 2.0, <RequestStatus.Open: 0>)]
+(Background on this error at: http://sqlalche.me/e/13/rvf5)
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+ERROR - DB_Logger - func: add_new_request failed with error (sqlite3.InterfaceError) Error binding parameter 5 - probably unsupported type.
+[SQL: INSERT INTO request (recipient, donor, volunteer, donation, recipients_amount, status) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('email2', 'email1', None, 1, 2.0, <RequestStatus.Open: 0>)]
+(Background on this error at: http://sqlalche.me/e/13/rvf5)
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB
+INFO - DB_Logger - add_new_user failed with error EmailExistsInDB

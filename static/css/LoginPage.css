@@ -1,0 +1,116 @@
+.u-section-1 {
+  min-height: 521px;
+}
+
+.u-section-1 .u-layout-wrap-1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.u-section-1 .u-image-1 {
+  min-height: 521px;
+  background-image: url("../images/food_login.jpg");
+  background-position: 50% 50%;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 30px;
+}
+
+.u-section-1 .u-layout-cell-2 {
+  min-height: 534px;
+}
+
+.u-section-1 .u-container-layout-2 {
+  padding: 30px;
+}
+
+.u-section-1 .u-text-1 {
+  font-weight: 400;
+  margin: 0 auto;
+}
+
+.u-section-1 .u-text-2 {
+  margin-left: 0;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+.u-section-1 .u-text-3 {
+  font-size: 1.5rem;
+  margin: 20px auto 0 0;
+}
+
+.u-section-1 .u-btn-1 {
+  border-style: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+  background-image: none;
+  margin: 42px auto 0;
+  padding: 8px 33px;
+}
+
+.u-section-1 .u-image-2 {
+  width: 180px;
+  height: 180px;
+  margin: 30px auto 0;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 {
+    min-height: 430px;
+  }
+
+  .u-section-1 .u-image-1 {
+    min-height: 430px;
+  }
+
+  .u-section-1 .u-layout-cell-2 {
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 {
+    min-height: 329px;
+  }
+
+  .u-section-1 .u-image-1 {
+    min-height: 329px;
+  }
+
+  .u-section-1 .u-layout-cell-2 {
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 {
+    min-height: 594px;
+  }
+
+  .u-section-1 .u-image-1 {
+    min-height: 494px;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 {
+    min-height: 411px;
+  }
+
+  .u-section-1 .u-image-1 {
+    min-height: 311px;
+  }
+}
