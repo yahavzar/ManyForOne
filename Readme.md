@@ -45,7 +45,7 @@ Purpose: Keep reliable tags for donations, avoid false/incorrect tags.
     * The tag is removed from the suggestions list and added as a label to the donation to search by
     * Every user in user_ids gets a `+1` for his Tagging score 
    
->path: [server\Donation_Preview.py](server\Donation_Preview.py)
+>path: [server/Donation_Preview.py](server/Donation_Preview.py)
 
 ### Similar Tags
 Purpose: Keeping the tags general to optimize the search and avoiding typos and redundancy.
@@ -56,7 +56,7 @@ Purpose: Keeping the tags general to optimize the search and avoiding typos and 
 * take 3 most common suggestions
 * Show the most similar results for the user to choose from
 
->path: [server\Donation_Preview.py](server\Donation_Preview.py)
+>path: [server/Donation_Preview.py](server/Donation_Preview.py)
 
 ### Recommendations System
 - Collaborative filtering - based on users' activity: “Users who took donations from this place, also took donations from these places… ”
@@ -75,14 +75,14 @@ Purpose:
 - Find the minimum number of tags in the open donations
     * Change the pins’ color of the donations with the minimum number of tags 
 
->path: [server\home_page.py](server\home_page.py) [DB\donations.py](DB\donations.py) [server\Donation_Preview.py](server\Donation_Preview.py)
+>path: [server/home_page.py](server/home_page.py) [DB/donations.py](DB\donations.py) [server/Donation_Preview.py](server\Donation_Preview.py)
 
 ### Volunteer View
 Purpose: 
 - Show the donations that have open requests on the map for a volunteer to review
 - Each request is shown with the distance between the donor and the recipient
 
->path: [server\home_page.py](server\home_page.py) [DB\donations.py](DB\donations.py) [server\Donation_Preview.py](server\Donation_Preview.py)
+>path: [server/home_page.py](server/home_page.py) [DB/donations.py](DB\donations.py) [server/Donation_Preview.py](server\Donation_Preview.py)
 
 ### Quantity Prediction
 Purpose: 
@@ -93,7 +93,7 @@ Purpose:
   * A user can enter his prediction if he is not already in the predictors list.
   * After every prediction the value is updated to the median of the predictions (less sensitive to extreme scores).
 
->path: [server\Donation_Preview.py](server\Donation_Preview.py)
+>path: [server/Donation_Preview.py](server/Donation_Preview.py)
 
 ### Blacklisting
 Purpose: remove unreliable users. 
