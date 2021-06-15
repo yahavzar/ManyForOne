@@ -82,7 +82,7 @@ Purpose:
 - Show the donations that have open requests on the map for a volunteer to review
 - Each request is shown with the distance between the donor and the recipient
 
->path: [server/home_page.py](server/home_page.py) [DB/donations.py](DB\donations.py) [server/Donation_Preview.py](server\Donation_Preview.py)
+>path: [server/home_page.py](server/home_page.py) [DB/donations.py](DB/donations.py) [server/Donation_Preview.py](server\Donation_Preview.py)
 
 ### Quantity Prediction
 Purpose: 
