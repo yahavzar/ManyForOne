@@ -75,7 +75,7 @@ Purpose:
 - Find the minimum number of tags in the open donations
     * Change the pins’ color of the donations with the minimum number of tags 
 
->path: [server/home_page.py](server/home_page.py) [DB/donations.py](DB\donations.py) [server/Donation_Preview.py](server/Donation_Preview.py)
+>path: [server/home_page.py](server/home_page.py) [DB/donations.py](DB/donations.py) [server/Donation_Preview.py](server/Donation_Preview.py)
 
 ### Volunteer View
 Purpose: 
